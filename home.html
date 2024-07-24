@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home</title>
+
+        <link rel="stylesheet" href="styles/first_style.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <style>
+            body{
+                background-color: rgb(3, 3, 31)
+            }
+            div[name="main"]{
+                color:white;
+                margin-top: 5px;
+                padding:150px;
+                background-color: rgb(18, 0, 15);
+                background-image: url("embeded.jpg");
+                background-size: cover; /* Ensures the background image covers the entire div */
+                background-position: center; /* Centers the background image */
+                text-align: center;
+            }
+            
+            div[name="card_1"]{
+                background-color: rgba(42, 5, 49, 0.5); /* Background with 50% opacity */
+                border-radius: 10px; /* Rounded corners */
+                padding: 20px; /* Padding inside the card */
+                box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */
+                border: 1px solid rgba(34, 3, 3, 0.1);
+                color:rgb(1, 8, 24);
+                font-family: Georgia, serif;
+                
+            }
+            
+            div[name="card_2"]{
+                background-color: rgba(80, 40, 88, 0.5); /* Background with 50% opacity */
+                border-radius: 10px; /* Rounded corners */
+                padding: 20px; /* Padding inside the card */
+                box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */
+                border: 5px solid rgba(34, 3, 3, 0.1);
+                color:rgb(255, 255, 255);
+                text-align: center;
+                margin:30px;
+                font-family: Georgia, serif;
+                height:auto;
+                transition: transform 0.3s, box-shadow 0.3s;
+                
+            }
+            h1[name="font_1"]{
+                font-family: Georgia, serif;
+
+            }
+            h2[name="font_2"]{
+                font-family:'Exo 2', sans-serif;
+            }
+            h1[name="head_1"]{
+                font-family: Georgia, serif;
+                color:white;
+                text-align:center
+            }
+            .card-container {
+                display: flex; /* Use flexbox to create a row layout */
+                justify-content: space-between; /* Distribute cards evenly along the main axis */
+                gap: 20px; /* Optional: Space between cards */
+            }
+            div[name="card_3"]{
+                flex: 1; /* Each card takes up equal space */
+                background-color: rgba(42, 5, 49, 0.5); /* Background with 50% opacity */
+                border-radius: 10px; /* Rounded corners */
+                padding: 20px; /* Padding inside the card */
+                box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */*-
+                border: 1px solid rgba(34, 3, 3, 0.1);
+                margin:30px;
+                color:white;
+                text-align:center;
+            }
+            div[name="card_1"]:hover {
+                transform: translateY(-5px); /* Move card up slightly on hover */
+                box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+                background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+                color:white;
+            }
+
+            div[name="card_3"]:hover {
+                transform: translateY(-5px); /* Move card up slightly on hover */
+                box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+                background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+                color:white;
+            }
+
+            div[name="card_2"]:hover {
+                transform: translateY(-5px); /* Move card up slightly on hover */
+                box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+                background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+                color:white;
+            }
+            img[name="set_1"]{
+                border-radius: 10px;
+                height:auto;
+                width : auto;
+            }
+            img[name="png"]{
+                height:50%;
+                width : 50%;
+            }
+            h5[name="head_1"]:hover {
+                color:aqua;
+            }
+            .left-section, .right-section {
+                flex: 1; /* Equal width for both sections */
+                padding: 20px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+                margin-right: 10px;
+            }
+            .carousel-item img {
+                position: relative;
+            }
+            .overlay {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                width: 100%;
+                z-index: 1;
+            }
+            .carousel-caption {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+}
+            @media (max-width: 768px) {
+            div[name="card_1"]{
+                padding: 15px;
+                font-size: 0.9em; /* Decrease font size for smaller screens */
+                }
+            }
+
+            @media (max-width: 576px) {
+            div[name="card_1"]{
+                padding: 10px;
+                font-size: 0.8em; /* Further decrease font size for extra small screens */
+                }
+            }
+        </style>
+        </head>
+    <body>
+        <div class="navbar">
+            <h1>hello</h1>
+        </div>
+        <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="overlay">
+                        <div class="carousel-caption d-flex justify-content-center align-items-center">
+                            <div class="card" name="card_1">
+                            <h6><b>Empower Your Business with Cutting-Edge Software Solutions</b></h6>
+                            <h1>ZUVI SOLUTIONS</h1>
+                        </div></div>
+                    </div>
+                    <img src="embeded.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                </div></div><br>
+
+        
+            <div class="container">
+                <div class="card text-center" name="card_2">
+                    <div class="card-body">
+                        <p class="card-text">We specialize in delivering innovative software solutions tailored to enhance efficiency and productivity.</p>
+                    </div>
+                </div>
+                <br>
+                <h1 class="text-center mb-4" name="head_1">What We're Offering</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card text-center" name="card_3">
+                            <div class="card-body">
+                                <h6 class="card-title">Web App Development</h6>
+                                <img src="web_dev_4.jpg" class="img-fluid" alt="Web App Development">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" name="card_3">
+                            <div class="card-body">
+                                <h6 class="card-title">Mobile App Development</h6>
+                                <img src="mob_dev.jpg" class="img-fluid" alt="Mobile App Development">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center" name="card_3">
+                            <div class="card-body">
+                                <h6 class="card-title">Digital Marketing</h6>
+                                <img src="dig_mark.jpg" class="img-fluid" alt="Digital Marketing">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+
+        </div><br>
+        <div class="container">
+            <h1 class="text-center mb-4" name="head_1">Crafting Your Ultimate Digital Realm</h1>
+        
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card text-center mb-4" name="card_2">
+                        <div class="card-body">
+                            <img src="think_.png" name="png" class="img-fluid" alt="innovation">
+                            <h5 class="card-title" name="head_1">Innovative Software Solutions Driving Success</h5><br>
+                            <p>Get ahead of the curve with pioneering solutions. We harness cutting-edge technology and creative thinking to develop bespoke software solutions that drive your business forward and ensure its success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card text-center mb-4" name="card_2">
+                        <div class="card-body">
+                            <img src="computer.png" name="png" class="img-fluid" alt="computer">
+                            <h5 class="card-title" name="head_1">Pioneering Your Digital Success Journey</h5><br>
+                            <p>We specialize in innovative digital solutions that propel growth. With over a decade of expertise, we deliver advanced IT services to strategically elevate your business in today's dynamic landscape.</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="card text-center mb-4" name="card_2">
+                    <div class="card-body">
+                        <div id="carouselExampleCaptions" class="carousel slide">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="web_dev_4.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>First slide label</h5>
+                                  <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="web_dev_2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Second slide label</h5>
+                                  <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="web_dev_3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h5>Third slide label</h5>
+                                  <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div></div>
+                </div>
+            
+  
+        </div>
+    </body>
+</html>
+<!--div class="left-section">
+            <h6>Lead the market with pioneering solutions.
+                We harness advanced technology and creative ideas to develop customized software solutions that drive your business forward.</h6>
+            </div>
+            <div class="right-section">
+                <h6>Our team of experts is dedicated to delivering exceptional results that exceed your expectations.
+            </div>-->
