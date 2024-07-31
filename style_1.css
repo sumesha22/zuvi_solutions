@@ -1,0 +1,422 @@
+body{
+    background-color: rgb(3, 3, 31);
+}
+div[name="main"]{
+    color:white;
+    margin-top: 5px;
+    padding:150px;
+    background-color: rgb(18, 0, 15);
+    background-image: url("embeded.jpg");
+    background-size: cover; /* Ensures the background image covers the entire div */
+    background-position: center; /* Centers the background image */
+    text-align: center;
+}
+
+div[name="card_1"]{
+    background-color: rgba(42, 5, 49, 0.5); /* Background with 50% opacity */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */
+    border: 1px solid rgba(34, 3, 3, 0.1);
+    color:rgb(1, 8, 24);
+    font-family: Georgia, serif;
+    
+}
+
+div[name="card_2"]{
+    background-color: rgba(80, 40, 88, 0.5); /* Background with 50% opacity */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */
+    border: 5px solid rgba(34, 3, 3, 0.1);
+    color:rgb(255, 255, 255);
+    text-align: center;
+    margin:30px;
+    font-family: Georgia, serif;
+    height:auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+h1[name="font_1"]{
+    font-family: Georgia, serif;
+
+}
+h2[name="font_2"]{
+    font-family:'Exo 2', sans-serif;
+}
+h1[name="head_1"]{
+    font-family: Georgia, serif;
+    color:white;
+    text-align:center
+}
+.card-container {
+    display: flex; /* Use flexbox to create a row layout */
+    justify-content: space-between; /* Distribute cards evenly along the main axis */
+    gap: 20px; /* Optional: Space between cards */
+}
+div[name="card_3"]{
+    flex: 1; /* Each card takes up equal space */
+    background-color: rgba(42, 5, 49, 0.5); /* Background with 50% opacity */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(231, 222, 222, 0.1); /* Optional: Shadow for depth */*-
+    border: 1px solid rgba(34, 3, 3, 0.1);
+    margin:30px;
+    color:white;
+    text-align:center;
+}
+div[name="card_1"]:hover {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+    background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+    color:white;
+}
+
+div[name="card_3"]:hover {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+    background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+    color:white;
+}
+
+div[name="card_2"]:hover {
+    transform: translateY(-5px); /* Move card up slightly on hover */
+    box-shadow: 0 6px 12px rgba(231, 222, 222, 0.3); /* Increase shadow intensity */
+    background-color: rgba(42, 5, 49, 0.7); /* Darken background color */
+    color:white;
+}
+img[name="set_1"]{
+    border-radius: 10px;
+    height:auto;
+    width : auto;
+}
+img[name="png"]{
+    height:50%;
+    width : 50%;
+}
+h5[name="head_1"]:hover {
+    color:aqua;
+}
+.left-section, .right-section {
+    flex: 1; /* Equal width for both sections */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-right: 10px;
+}
+@media (max-width: 991px){
+.carousel {
+position: relative; /* or absolute if it’s positioned absolutely */
+z-index: 500; /* Ensure this is lower than the off-canvas menu */
+/* Other styling properties */
+}
+.carousel-item img {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}}
+
+@media (min-width: 991px){
+    .carousel {
+    position: relative; /* or absolute if it’s positioned absolutely */
+    z-index: 500; /* Ensure this is lower than the off-canvas menu */
+    /* Other styling properties */
+    }
+    .carousel-item img {
+        height: 600px;
+    }
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+    }
+    .carousel-caption {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }}
+
+@media (max-width: 768px) {
+div[name="card_1"]{
+    padding: 15px;
+    font-size: 0.9em; /* Decrease font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+div[name="card_1"]{
+    padding: 10px;
+    font-size: 0.8em; /* Further decrease font size for extra small screens */
+    }
+}
+
+
+/* Hide navbar collapse by default on large screens */
+@media (min-width: 992px) {
+    .navbar-collapse {
+      display: flex; /* Ensure the navbar items are displayed as a flex container */
+      flex-direction: row; /* Align items in a row */
+      justify-content: flex-end; /* Align items to the right */
+      position: static; /* Reset position to static */
+      transform: none; /* Reset transform */
+      color:white;
+    }
+    h3[name="tog_head"]{
+        display:none;
+    }
+    button[name="close"]{
+        display:none;
+    }
+    li{
+        margin-left: 5rem;
+    }
+    .nav-link{
+        text-align: center;
+        font-size: 18px;
+        font-family: Georgia, serif;
+        color:white;
+    }
+    .nav-link:hover{
+        text-align: left;
+        font-family: Georgia, serif;
+        color:aqua;
+        font-size:20px;
+    }
+    /* Logo styling */
+.navbar-logo { /* Adjust height as needed */
+    margin-right: 1rem; 
+    height:50px;
+    width:50px;
+    padding:4px;
+    /* Space between logo and brand name */
+  }
+  
+  /* Adjust navbar brand padding */
+  .navbar-brand {
+    display: flex; /* Flexbox to align logo and text */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem 1rem; /* Padding around the brand */
+    margin-right: auto; /* Push other elements to the right */
+    color:white;
+    font-family: Georgia, serif;
+    font-size: 18px;
+  }
+  .navbar-brand:hover {
+    display: flex; /* Flexbox to align logo and text */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem 1rem; /* Padding around the brand */
+    margin-right: auto; /* Push other elements to the right */
+    color:aqua;
+    font-family: Georgia, serif;
+    font-size:20px;
+  }
+    }
+
+    .navbar-toggler {
+      display: none; /* Hide the toggler button on larger screens */
+    }
+
+  
+  /* Styling for small screens */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      position: absolute; /* Position the collapse menu absolutely */
+      top: 0;
+      right: 0;
+      width: 250px; /* Set width for the expanded menu */
+      background-color: #291834; /* Background color of the collapsed menu */
+      height: 100vh; /* Full viewport height */
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+      transform: translateX(100%); /* Initially hide the collapse menu off-screen */
+      transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+      z-index: 1050; /* Ensure it appears above other content */
+      color:white;
+      
+    }
+    .navbar-logo { /* Adjust height as needed */
+        margin-right: 2rem;
+        height:60px;
+        width:60px;
+        padding:5px;
+        /* Space between logo and brand name */
+      }
+      
+      /* Adjust navbar brand padding */
+      .navbar-brand {
+        display: flex; /* Flexbox to align logo and text */
+        align-items: center; 
+        /* Center items vertically */
+        padding: 0.5rem 1rem; /* Padding around the brand */
+        margin-right: auto; /* Push other elements to the right */
+        color:white;
+        font-family:Georgia, serif; ;
+      }
+      .navbar-brand:hover{
+        display: flex; /* Flexbox to align logo and text */
+        align-items: center; 
+        /* Center items vertically */
+        padding: 0.5rem 1rem; /* Padding around the brand */
+        margin-right: auto; /* Push other elements to the right */
+        color:aqua;
+        font-family:Georgia, serif;
+        font-size:22px;
+      }
+  
+    .navbar-collapse.show {
+      transform: translateX(0); /* Slide in the collapse menu when toggled */
+    }
+  
+    .navbar-toggler {
+      display: block; /* Show the toggler button on small screens */
+    }    
+button[name="close"]{
+    background-color: #251430;
+    border: 0px;
+    padding:20px
+
+}
+
+h3[name="tog_head"]{
+    background-color: white;
+    color:rgba(42, 5, 49);
+    text-align: center;
+    padding: 12px;
+}
+h3[name="tog_head"]:hover{
+    background-color: rgba(42, 5, 49);
+    color:white;
+    text-align: center;
+    padding: 12px;
+}
+.nav-link{
+    text-align: center;
+    font-size: 18px;
+    font-family: Georgia, serif;
+    color:white;
+}
+.nav-link:hover{
+    background-color: rgba(42, 5, 49);
+    text-align:center;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    color:white;
+}
+  
+  .navbar-collapse.show {
+    transform: translateX(0); /* Slide in the menu when toggled */
+  }
+  
+  @media (min-width: 992px) {
+    .navbar-toggler {
+      display: none; /* Hide toggler on larger screens */
+    }
+  }
+}
+
+/* Social media icons container */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 1rem; /* Space between icons */
+    padding: 1rem; /* Padding around the icons */
+  }
+  
+  /* Individual social media icon styling */
+  .social-icon {
+    color: #333; /* Default color */
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Hover effect */
+  .social-icon:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+
+.footer {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+background-color: #333;
+color: white;
+padding: 20px;
+box-sizing: border-box;
+background-color: rgba(80, 40, 88, 0.5);
+color:aqua;
+text-align: center;
+font-family: Georgia, serif;
+}
+
+.footer-section {
+flex: 1;
+min-width: 200px;
+margin: 10px;
+}
+
+.footer-section h3, .footer-section h4 {
+margin-top: 0;
+}
+
+.footer-section ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin: 5px 0;  
+}
+
+.footer-section a {
+color: #fff;
+text-decoration: none;            
+}
+
+.footer-section a:hover {
+text-decoration: underline;
+}
+
+.footer-section address {
+margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.footer {
+flex-direction: column;
+align-items: center;
+}
+
+.footer-section {
+margin: 10px 0;
+text-align: center;
+}
+div[name="foot"]{
+    color:white;
+} 
